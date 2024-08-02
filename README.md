@@ -6,7 +6,7 @@ Check for satisfied one gadget constraints using the state of a running gdb inst
 ## Manual Install 
 Installs pwn_gadget package for use in pwntools scripts and as a gdb command
 ```
-git clone https://github.com/zolutal/pwn_gadget && \
+git clone https://github.com/h1ghl1kh7/pwn_gadget && \
 pip install pwn_gadget/ && \
 cp pwn_gadget/pwn_gadget.py ~/.pwn_gadget.py && echo "source ~/.pwn_gadget.py" >> ~/.gdbinit
 ```

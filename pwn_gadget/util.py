@@ -49,7 +49,7 @@ def get_constraints_list(path: str, level: int) -> List[str]:
     raise Exception(f"Path '{path}' is invalid")
 
 def get_current_pc(gdb_api) -> int:
-    return int(gdb_api.execute("p/x $pc", to_string=True).split(" ")[-1], 16)
+    return int(gdb_api.execute("print/x $pc", to_string=True).split(" ")[-1], 16)
 
 def get_libc_path(gdb_api) -> str:
     output_raw: str = gdb_api.execute("info sharedlibrary libc", to_string=True).strip()

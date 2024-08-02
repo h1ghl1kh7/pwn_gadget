@@ -47,7 +47,7 @@ def check_constraint_group(gdb_api, constraint_group: ConstraintGroup) -> Tuple[
     unknown: List[Constraint] = []
     for constraint in constraint_group.constraints:
         try:
-            res: str = gdb_api.execute(f"p {constraint.arg1}", to_string=True)
+            res: str = gdb_api.execute(f"print {constraint.arg1}", to_string=True)
         except:
             unknown.append(constraint)
             continue
